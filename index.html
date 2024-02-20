@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Teksto šifravimas naudojant Cezario algoritma</h1>
+
+    <p>Įveskite tekstą:</p>
+    <textarea class="unencrypted-text"></textarea>
+
+    <p>Įveskite poslinkį:</p>
+    <input type="number" max="94" class="offset-text">
+
+    <p>Pasirinkite šifravimo būda:</p>
+    <select id="algorithm">
+        <option value="1">Tik raidės ir skaičius</option>
+        <option value="2">Visas ASCII simbolius</option>
+      </select>
+
+    <button onclick="onSubmit()" class="submit-btn" type="submit" >Šifruoti tekstą</button>
+    <button onclick="onSubmitDecode()" style="display: none" class="submit-btn decode" type="submit" >Dešifruoti rezultato tekstą</button>
+
+    <p>Rezultatas:</p>
+    <div class="encrypted-text-container">
+        <p style="word-wrap: break-word" class="result"></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
